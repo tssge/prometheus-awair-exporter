@@ -197,9 +197,9 @@ func recordMetricsLoop(sensors map[string]string, delay time.Duration) {
 
 func main() {
 	var opts struct {
-		Address string            `short:"a" long:"address" default:"127.0.0.1:8888" description:"Address to listen on"`
+		Address string            `short:"a" long:"address" default:"0.0.0.0:9673" description:"Address to listen on"`
 		Sensors map[string]string `short:"s" long:"sensor" required:"true" description:"Sensor names and IP addresses"`
-		Delay   time.Duration     `short:"d" long:"delay" default:"5s" description:"Delay between attempts to refresh metrics"`
+		Delay   time.Duration     `short:"d" long:"delay" default:"15s" description:"Delay between attempts to refresh metrics"`
 	}
 
 	if _, err := flags.Parse(&opts); err != nil {
