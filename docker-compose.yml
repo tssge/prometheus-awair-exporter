@@ -1,0 +1,8 @@
+version: '3'
+services:
+    exporter:
+        image: tssge/prometheus-awair-exporter:latest
+        environment:
+         - SENSOR="bedroom:1.2.3.4"
+        ports:
+         - 9673:9673
