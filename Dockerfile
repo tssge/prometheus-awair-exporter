@@ -10,4 +10,4 @@ RUN go build -o awair-exporter
 # expose the port used by the exporter
 EXPOSE 9673
 
-ENTRYPOINT ["/app/awair-exporter"]
+ENTRYPOINT ["/bin/sh", "/app/entrypoint.sh"]
